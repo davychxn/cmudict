@@ -1,11 +1,11 @@
-
-CMUdict
--------
+# CMUdict
 
 CMUdict (the Carnegie Mellon Pronouncing Dictionary) is a free
 pronouncing dictionary of English, suitable for uses in speech
 technology and is maintained by the Speech Group in the School of
 Computer Science at Carnegie Mellon University.
+
+**Official Homepage:** http://www.speech.cs.cmu.edu/cgi-bin/cmudict
 
 The Carnegie Mellon Speech Group does not guarantee the accuracy of
 this dictionary, nor its suitability for any specific purpose. In
@@ -31,8 +31,7 @@ subsequent version. All submissions will be reviewed and approved by
 the current maintainer, Alex Rudnicky at Carnegie Mellon.
 
 
-About ARPABET
--------------
+## About ARPABET
 
 ARPABET (also known as ARPAbet) is a phonetic transcription code
 developed by Advanced Research Projects Agency (ARPA) as a part of
@@ -59,8 +58,7 @@ system because:
    of this dictionary.
 
 
-Speech Synthesis Applications
-------------------------------
+## Speech Synthesis Applications
 
 The CMUdict ARPABET encoding is widely used in various speech
 synthesis systems:
@@ -75,8 +73,61 @@ For more information on phonetic sets in Azure Speech Services, see:
 https://docs.azure.cn/en-us/ai-services/speech-service/speech-ssml-phonetic-sets
 
 
-Additional Resources
---------------------
+## Phoneme Mapping to IPA
+
+### Microsoft SAPI Phoneme to IPA Symbol Mapping (American English)
+
+For applications that need to convert between ARPABET/SAPI phonemes (used in CMUdict)
+and IPA (International Phonetic Alphabet) symbols, here is a mapping example:
+
+```python
+SAPI_TO_IPA = {
+    # Vowels
+    "AA": "ɑ",
+    "AE": "æ",
+    "AH": "ʌ",
+    "AO": "ɔ",
+    "AW": "aʊ",
+    "AY": "aɪ",
+    "EH": "ɛ",
+    "ER": "ɝ",
+    "EY": "eɪ",
+    "IH": "ɪ",
+    "IY": "i",
+    "OW": "oʊ",
+    "OY": "ɔɪ",
+    "UH": "ʊ",
+    "UW": "u",
+    # Consonants
+    "B":  "b",
+    "CH": "tʃ",
+    "D":  "d",
+    "DH": "ð",
+    "F":  "f",
+    "G":  "ɡ",
+    "HH": "h",
+    "JH": "dʒ",
+    "K":  "k",
+    "L":  "l",
+    "M":  "m",
+    "N":  "n",
+    "NG": "ŋ",
+    "P":  "p",
+    "R":  "ɹ",
+    "S":  "s",
+    "SH": "ʃ",
+    "T":  "t",
+    "TH": "θ",
+    "V":  "v",
+    "W":  "w",
+    "Y":  "j",
+    "Z":  "z",
+    "ZH": "ʒ",
+}
+```
+
+
+## Additional Resources
 
 NPM Package: A JavaScript/Node.js implementation of the CMU
 Pronouncing Dictionary is available:
